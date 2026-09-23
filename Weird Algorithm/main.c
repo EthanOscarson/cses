@@ -1,3 +1,5 @@
+// 9/22/26 Weird Algorithm - 4 attempts (learning how C works)
+
 #include <stdio.h>
 #include <stdbool.h>
 
