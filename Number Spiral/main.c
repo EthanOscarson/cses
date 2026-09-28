@@ -1,21 +1,23 @@
+// 9/28/26 - Number Spiral 
+
 #include <stdio.h>
 #include <math.h>
 
 long long findValue (long long x, long long y) {
     if (x>y) {
         if (x%2==1) {
-            return powl(x, 2) - y - 1;
+            return x * x - y - 1;
         } else {
-            return powl(x-1, 2) + y;
+            return (x-1) * (x-1) + y;
         }
     } else if (y>x) {
         if (x%2==0) {
-            return powl(y, 2) - x - 1;
+            return y * y - x - 1;
         } else {
-            return powl(y-1, 2) + x;
+            return (y-1) * (y-1) + x;
         }
     } else {
-        return powl(x, 2) - x + 1;
+        return x * x - x + 1;
     }
     // Finding the number is dependent on if x or y is largest or equal to each other and if they are even or odd. 
     // See solution.jpeg for thought process
