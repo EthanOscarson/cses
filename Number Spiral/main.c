@@ -1,0 +1,38 @@
+// 9/28/26 - Number Spiral 6 attempts
+// Improvement steps:
+// 1. Pay attention to types, power was a double which messed up calculations.
+// 2. When writing psuedocode, validate it thoroughly because you trust it when writing it. Makes it harder to see your bugs if you trust wrong pseudocode.
+
+#include <stdio.h>
+
+long long findValue (long long x, long long y) {
+    if (x>y) {
+        if (x%2==1) {
+            return x * x - y + 1;
+        } else {
+            return (x-1) * (x-1) + y;
+        }
+    } else if (y>x) {
+        if (y%2==0) {
+            return y * y - x + 1;
+        } else {
+            return (y-1) * (y-1) + x;
+        }
+    } else {
+        return x * x - x + 1;
+    }
+    // Finding the number is dependent on if x or y is largest or equal to each other and if they are even or odd. 
+    // See solution.jpg for thought process
+}
+
+int main (void) {
+    int n = 0;
+    scanf("%d", &n);
+    for (int i = 0; i < n; i++) {
+        long long y = 0;
+        long long x = 0;
+        scanf("%lld", &y);
+        scanf("%lld", &x);
+        printf("%lld\n", findValue(x, y));
+    }
+}
