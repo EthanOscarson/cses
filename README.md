@@ -1,5 +1,7 @@
 # CSES Solutions
 
+![Hackatime Badge](https://hackatime-badge.hackclub.com/ethano/cses?style=for-the-badge)
+
 [CSES Problem Set](https://cses.fi/problemset/)
 
 [My CSES Profile](https://cses.fi/user/509127)
