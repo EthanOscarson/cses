@@ -1,21 +1,21 @@
 #include <stdio.h>
-
+#include <math.h>
 
 long long findValue (long long x, long long y) {
     if (x>y) {
         if (x%2==1) {
-            return (x << 1) - y - 1;
+            return pow(x, 2) - y - 1;
         } else {
-            return ((x-1) << 1) + y;
+            return pow(x-1, 2) + y;
         }
     } else if (y>x) {
         if (x%2==0) {
-            return (y << 1) - x - 1;
+            return pow(y, 2) - x - 1;
         } else {
-            return ((y-1) << 1) + x;
+            return pow(y-1, 2) + x;
         }
     } else {
-        return (x << 1) - x + 1;
+        return pow(x, 2) - x + 1;
     }
     // Finding the number is dependent on if x or y is largest or equal to each other and if they are even or odd. 
     // See solution.jpeg for thought process
