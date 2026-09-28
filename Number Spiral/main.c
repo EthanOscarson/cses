@@ -1,18 +1,17 @@
 // 9/28/26 - Number Spiral 
 
 #include <stdio.h>
-#include <math.h>
 
 long long findValue (long long x, long long y) {
     if (x>y) {
         if (x%2==1) {
-            return x * x - y - 1;
+            return x * x - y + 1;
         } else {
             return (x-1) * (x-1) + y;
         }
     } else if (y>x) {
         if (x%2==0) {
-            return y * y - x - 1;
+            return y * y - x + 1;
         } else {
             return (y-1) * (y-1) + x;
         }
